@@ -5,9 +5,9 @@ but I plan to branch off from it soon.
 
 ## TODO (More entries will be added as I work)
 - [ ] Refactor into library
-- CRUD Headers
-    - [ ] GET
-    - [ ] POST
-    - [ ] PUT
-    - [ ] UPDATE
+- [ ] Routing
+- [ ] GET
+- [ ] POST
+- [ ] PUT
+- [ ] UPDATE
 - [ ] Multithreading
