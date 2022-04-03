@@ -3,6 +3,11 @@
 Right now, this project is just following along with the rust book web server project,
 but I plan to branch off from it soon.
 
-## TODO
-- [ ] Multithreading
+## TODO (More entries will be added as I work)
 - [ ] Refactor into library
+- CRUD Headers
+    - [ ] GET
+    - [ ] POST
+    - [ ] PUT
+    - [ ] UPDATE
+- [ ] Multithreading
