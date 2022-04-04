@@ -3,7 +3,7 @@ use std::io::prelude::*;
 use std::net::{TcpListener, TcpStream};
 
 fn main() -> std::io::Result<()> {
-    let listener = TcpListener::bind("127.0.0.1:80")?;
+    let listener = TcpListener::bind("0.0.0.0:80")?;
     println!("Started server on port 80");
 
     for stream in listener.incoming() {
