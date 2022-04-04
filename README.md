@@ -5,7 +5,7 @@ but I plan to branch off from it soon. In fact, I don't even plan on following t
 
 ## Compiling
 
-Make sure to compile using x86_64-unknown-linux-musl as the target, so it will run on most servers
+Make sure to compile using `x86_64-unknown-linux-musl` as the target, so it will run on most servers
 
 ## TODO
 - [ ] Refactor into library
