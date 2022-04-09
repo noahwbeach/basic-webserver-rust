@@ -8,11 +8,11 @@ but I plan to branch off from it soon. In fact, I don't even plan on following t
 Make sure to compile using `x86_64-unknown-linux-musl` as the target, so it will run on most servers
 
 ## TODO
-- [ ] Refactor into library
-- [ ] Routing
-- [ ] GET
+- [x] Refactor into library
+- [x] Routing
+- [x] GET
 - [ ] POST
 - [ ] PUT
 - [ ] UPDATE
-- [ ] Configurable listening address
+- [x] Configurable listening address
 - [ ] Multithreading
