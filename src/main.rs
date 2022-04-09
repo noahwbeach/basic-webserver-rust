@@ -1,31 +1,13 @@
-use std::fs;
-use std::io::prelude::*;
-use std::net::{TcpListener, TcpStream};
+mod lib;
+use lib::{Route, WebServer};
 
 fn main() -> std::io::Result<()> {
-    let listener = TcpListener::bind("127.0.0.1:3000")?;
-    println!("Started server on port 3000");
+    let index = Route::new("/", "GET");
+    let test = Route::new("/test", "GET");
 
-    for stream in listener.incoming() {
-        handle_client(stream?);
-    }
+    let routes = vec![index, test];
+
+    WebServer::new().base_dir("./html").bind("127.0.0.1:3000").register(routes).listen();
 
     Ok(())
-}
-
-fn handle_client(mut stream: TcpStream) {
-    let mut buffer = [0; 1024];
-
-    stream.read(&mut buffer).unwrap();
-
-    let contents = fs::read_to_string("index.html").unwrap();
-
-    let response = format!(
-        "HTTP/1.1 200 OK\r\nContent-Length: {}\r\n\r\n{}",
-        contents.len(),
-        contents
-    );
-
-    stream.write(response.as_bytes()).unwrap();
-    stream.flush().unwrap();
 }
